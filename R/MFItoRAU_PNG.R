@@ -1,5 +1,7 @@
 MFItoRAU_PNG <- function(antigen_output, plate_list, counts_output){
 
+  devtools::load_all()
+
   master_file <- antigen_output
   L <- master_file$results
   layout <- plate_list

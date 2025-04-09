@@ -1,7 +1,8 @@
 
 readSeroData <- function(raw_data, raw_data_filenames, platform){
 
-  platemap <- read.csv(here::here("data/platemap.csv"))
+  devtools::load_all()
+  # platemap <- read.csv(here::here("data/platemap.csv"))
 
   # Initialise master list to store files
   master_list <- list(

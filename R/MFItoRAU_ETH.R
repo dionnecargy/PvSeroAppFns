@@ -1,5 +1,7 @@
 MFItoRAU_ETH <- function(antigen_output, plate_list, counts_output){
 
+  devtools::load_all()
+
   master_file <- antigen_output$results
   L <- master_file %>% mutate(across(-c(Location, Sample, Plate), as.numeric))
   layout <- plate_list
@@ -8,7 +10,7 @@ MFItoRAU_ETH <- function(antigen_output, plate_list, counts_output){
   #### Reference Fit
   ##########################################################################################################
 
-  refs <- read.csv(here::here("data/png_eth_stds.csv"))
+  refs <- png_eth_stds
   # MAGIC PARAMETERS FOR THIS SECTION
   s1_concentration <- 1/50
   s10_relative_dilution <- 2^-9

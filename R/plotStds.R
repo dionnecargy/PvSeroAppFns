@@ -1,5 +1,6 @@
 
 plotStds <- function(antigen_output, location, experiment_name){
+  devtools::load_all()
 
   master_file <- antigen_output
   stds <- master_file$stds
@@ -13,7 +14,7 @@ plotStds <- function(antigen_output, location, experiment_name){
 
   location_1 <- ifelse(location == "ETH", "ETH", "PNG")
 
-  wehi_stds <- read.csv("data/wehi_compare_data/all_stds_MFI.csv")
+  wehi_stds <- all_stds_MFI
   wehi_stds <- wehi_stds %>% dplyr::filter(Location==location_1)
 
   gg <-

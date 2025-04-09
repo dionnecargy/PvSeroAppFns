@@ -9,9 +9,11 @@ plotMFI <- function(mfi_to_rau_output, location){
     dplyr::mutate(Plate = factor(Plate, levels = unique(Plate[order(as.numeric(str_extract(Plate, "\\d+")))])), # Reorder by plate number
                   MFI = as.numeric(MFI))
 
+  devtools::load_all()
+
   if (location == "PNG"){
 
-    df_wehi <- read.csv(here::here("data/wehi_compare_data/longitudinal_MFI.csv"))
+    df_wehi <- longitudinal_MFI
 
     plot <- df_results %>%
       ggplot2::ggplot(aes(x= Antigen, y = MFI)) +

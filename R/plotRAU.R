@@ -1,6 +1,8 @@
 
 plotRAU <- function(mfi_to_rau_output, location){
 
+  devtools::load_all()
+
   df_results <- mfi_to_rau_output[[2]]
   df_results <- df_results %>%
     dplyr::select(SampleID, Plate, ends_with("_Dilution")) %>%
@@ -11,7 +13,7 @@ plotRAU <- function(mfi_to_rau_output, location){
 
   if (location == "PNG"){
 
-    df_wehi <- read.csv(here::here("data/wehi_compare_data/longitudinal_RAU.csv"))
+    df_wehi <- longitudinal_RAU
 
     plot <- df_results %>%
       ggplot2::ggplot(aes(x= Antigen, y = RAU, fill = Antigen)) +
