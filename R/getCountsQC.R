@@ -1,18 +1,18 @@
 
-getCountsQC <- function(antigens_counts_output, counts_output){
+getCountsQC <- function(antigen_counts_output, counts_output){
 
   #############################################################################
   # Data Wrangling
   #############################################################################
 
   # 1. Data Wrangling to store counts per antigen output
-  antigen_counts_only <- antigens_counts_output %>%
+  antigen_counts_only <- antigen_counts_output %>%
     pivot_wider(id_cols = c(SampleID, Location, Plate), names_from = "Antigen", values_from = "Count") %>%
     dplyr::select(Location, SampleID, Plate, everything()) %>%
     dplyr::rename_with(~ paste0(., "_Count"), .cols = where(is.numeric))
 
   # 2. Data Wrangling to store QC pass/fail per antigen output
-  antigen_QC_only <- antigens_counts_output %>%
+  antigen_QC_only <- antigen_counts_output %>%
     pivot_wider(id_cols = c(SampleID, Location, Plate), names_from = "Antigen", values_from = "QC_antigen") %>%
     dplyr::rename_with(~ paste0(., "_QC"), .cols = -c(SampleID, Location, Plate))
 

@@ -1,4 +1,4 @@
-plotModel_PNG <- function(mfi_to_rau_output, antigens_output){
+plotModel_PNG <- function(mfi_to_rau_output, antigen_output){
 
   model_results <- mfi_to_rau_output[[3]]
 
@@ -19,11 +19,11 @@ plotModel_PNG <- function(mfi_to_rau_output, antigens_output){
   combined_data <- do.call(rbind, combined_data)
 
   ### Get Standards for points
-  stds_file <- antigens_output$stds
+  stds_file <- antigen_output$stds
   stds_log <-
     stds_file %>%
-    dplyr::mutate(across(-c(Location, SampleID, Plate), ~ as.numeric(.))) %>%
-    tidyr::pivot_longer(-c(Location, SampleID, Plate), names_to = "Antigen", values_to = "stdcurve") %>%
+    dplyr::mutate(across(-c(Location, Sample, Plate), ~ as.numeric(.))) %>%
+    tidyr::pivot_longer(-c(Location, Sample, Plate), names_to = "Antigen", values_to = "stdcurve") %>%
     dplyr::mutate(dilution = ifelse(
       Sample == "S1", 1/50,
       ifelse(Sample == "S2", 1/100,

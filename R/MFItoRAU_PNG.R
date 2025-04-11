@@ -1,4 +1,4 @@
-MFItoRAU_PNG <- function(antigen_output, plate_list, counts_output){
+MFItoRAU_PNG <- function(antigen_output, plate_list, counts_QC_output){
 
   devtools::load_all()
 
@@ -176,7 +176,7 @@ MFItoRAU_PNG <- function(antigen_output, plate_list, counts_output){
   # Return the final results tables with QC pass/fail
   #############################################################################
 
-  counts_data <- counts_output %>%
+  counts_data <- counts_QC_output %>%
     ungroup() %>%
     dplyr::select(SampleID, Plate, QC_total)
 

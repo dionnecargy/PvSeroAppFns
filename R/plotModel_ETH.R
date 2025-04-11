@@ -1,5 +1,5 @@
 
-plotModel_ETH <- function(mfi_to_rau_output, antigens_output){
+plotModel_ETH <- function(mfi_to_rau_output, antigen_output){
 
   # Load model results
   model_results <- mfi_to_rau_output[[3]]

@@ -1,5 +1,5 @@
 
-classify_final_results <- function(mfi_to_rau_output, algorithm_type, Sens_Spec, counts_output) {
+classify_final_results <- function(mfi_to_rau_output, algorithm_type, Sens_Spec, counts_QC_output) {
 
   devtools::load_all()
 
@@ -75,7 +75,7 @@ classify_final_results <- function(mfi_to_rau_output, algorithm_type, Sens_Spec,
   # Return the table of prediction classes and QC pass/fail
   #############################################################################
 
-  final_classification_qc <- counts_output %>%
+  final_classification_qc <- counts_QC_output %>%
     ungroup() %>%
     dplyr::select(SampleID, Plate, QC_total) %>%
     inner_join(final_results, by = c("SampleID", "Plate"))

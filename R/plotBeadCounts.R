@@ -1,8 +1,8 @@
 
-plotBeadCounts <- function(antigens_counts_output){
+plotBeadCounts <- function(antigen_counts_output){
 
-  antigens_counts_output$Plate <- factor(antigens_counts_output$Plate, levels = unique(antigens_counts_output$Plate[order(as.numeric(str_extract(antigens_counts_output$Plate, "\\d+")))])) # reorder by plate number
-  antigens_counts_output %>%
+  antigen_counts_output$Plate <- factor(antigen_counts_output$Plate, levels = unique(antigen_counts_output$Plate[order(as.numeric(str_extract(antigen_counts_output$Plate, "\\d+")))])) # reorder by plate number
+  antigen_counts_output %>%
     ggplot(aes(Plate, Count, colour = Repeat, alpha = Repeat, size = Repeat,
                text = paste("Sample:", SampleID, "<br>Bead Count:", Count, "<br>Location:", Location,"<br>Plate:", Plate))) +
     geom_hline(yintercept = 15, linetype = "dashed", colour = "#861e18") +

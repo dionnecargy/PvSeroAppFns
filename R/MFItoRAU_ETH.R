@@ -1,4 +1,4 @@
-MFItoRAU_ETH <- function(antigen_output, plate_list, counts_output){
+MFItoRAU_ETH <- function(antigen_output, plate_list, counts_QC_output){
 
   devtools::load_all()
 
@@ -202,7 +202,7 @@ MFItoRAU_ETH <- function(antigen_output, plate_list, counts_output){
   #### Joining all plate data
   ##########################################################################################################
 
-  counts_data <- counts_output %>%
+  counts_data <- counts_QC_output %>%
     ungroup() %>%
     dplyr::select(SampleID, Plate, QC_total)
 

@@ -1,8 +1,8 @@
 
-process_counts <- function(antigens_output){
+process_counts <- function(antigen_output){
 
   # 1. Store Counts Data
-  counts_data <- antigens_output$counts
+  counts_data <- antigen_output$counts
 
   # 2. Data Wrangling
   counts_data <- counts_data %>%
