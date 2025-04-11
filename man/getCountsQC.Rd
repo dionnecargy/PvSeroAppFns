@@ -5,14 +5,14 @@
 Create table with both Total and Antigens Counts Data
 }
 \description{
-This function joins together the total counts data (counts_output) and the antigen-specific counts data (antigens_counts_output).
+This function joins together the total counts data (counts_output) and the antigen-specific counts data (antigen_counts_output).
 }
 \usage{
-getCountsQC(antigens_counts_output, counts_output)
+getCountsQC(antigen_counts_output, counts_output)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{antigens_counts_output}{Output from `getAntigenCounts` (reactive).}
+  \item{antigen_counts_output}{Output from `getAntigenCounts` (reactive).}
   \item{counts_output}{Output from `getCounts` (reactive).}
 }
 \details{
@@ -37,7 +37,7 @@ Dionne Argyropoulos
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-getCountsQC(antigens_counts_output, counts_output)
+getCountsQC(antigen_counts_output, counts_output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

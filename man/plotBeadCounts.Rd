@@ -8,11 +8,11 @@ Plot Bead Counts per Antigen
 Enhances the `plotCounts` output by providing greater resolution, displaying antigens per plate, and enabling SampleID name visibility via hover (transformed to Plotly in server.R).
 }
 \usage{
-plotBeadCounts(antigens_counts_output)
+plotBeadCounts(antigen_counts_output)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{antigens_counts_output}{Output from `getAntigenCounts` (reactive).}
+  \item{antigen_counts_output}{Output from `getAntigenCounts` (reactive).}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -35,7 +35,7 @@ Dionne Argyropoulos
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-plotBeadCounts(antigens_counts_output)
+plotBeadCounts(antigen_counts_output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

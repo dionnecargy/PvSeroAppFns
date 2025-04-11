@@ -2,10 +2,10 @@
 \alias{plotMFI}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-A Capitalized Title (ideally limited to 65 characters)
+Plot the Median Fluorescence Itnensity of each antigen.
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Box plots with MFI values for each antigen and plate.
 }
 \usage{
 plotMFI(mfi_to_rau_output, location)
@@ -18,7 +18,7 @@ plotMFI(mfi_to_rau_output, location)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-Box plots with MFI values for each protein (ggplot).
+Box plots with MFI values for each antigen (ggplot).
 }
 \references{
 %% ~put references to the literature/web site here ~

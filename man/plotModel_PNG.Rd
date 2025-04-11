@@ -8,7 +8,7 @@ Plot the Median Fluorescent Intensity (MFI) to Relative Antibody Units (RAU) Res
 This function gets the Median Fluorescent Intensity (MFI) to Relative Antibody Units (RAU) model results data and plots the model fits based on MFItoRAU_PNG.
 }
 \usage{
-plotModel(mfi_to_rau_output, antigens_output)
+plotModel(mfi_to_rau_output, antigen_output)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -37,7 +37,7 @@ Shazia Ruybal-Pesantez, Dionne Argyropoulos
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-plotModel(mfi_to_rau_output, antigens_output)
+plotModel(mfi_to_rau_output, antigen_output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

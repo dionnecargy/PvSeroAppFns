@@ -8,7 +8,7 @@ Random Forest Classification
 This function classifies unknown samples as recently exposed or not (Note: MFItoRAU() needs to be run first to convert to RAU).
 }
 \usage{
-classify_final_results(mfi_to_rau_output, algorithm_type, Sens_Spec, counts_output)
+classify_final_results(mfi_to_rau_output, algorithm_type, Sens_Spec, counts_QC_output)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -26,7 +26,7 @@ classify_final_results(mfi_to_rau_output, algorithm_type, Sens_Spec, counts_outp
   (vi) "90\% specificity".
   (vii) "95\% specificity".
   }
-  \item{counts_output}{Output from `getCounts` (reactive).}
+  \item{counts_QC_output}{Output from `getCountsQC` (reactive).}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -50,7 +50,7 @@ Lauren Smith, Dionne Argyropoulos
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-classify_final_results(mfi_to_rau_output, "antibody_model", "maximised", counts_output)
+classify_final_results(mfi_to_rau_output, "antibody_model", "maximised", counts_QC_output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

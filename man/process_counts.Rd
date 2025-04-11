@@ -8,11 +8,11 @@ Process Counts data from readAntigens output.
 A helper function to process counts data.
 }
 \usage{
-process_counts(antigens_output)
+process_counts(antigen_output)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{antigens_output}{Output from `readAntigens` (reactive). }
+  \item{antigen_output}{Output from `readAntigens` (reactive). }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -36,7 +36,7 @@ Dionne Argyropoulos
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-process_counts(antigens_output)
+process_counts(antigen_output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

@@ -12,7 +12,7 @@ getSampleID(counts_data, plate_list)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{antigens_output}{Output from `readAntigens` (reactive).}
+  \item{antigen_output}{Output from `readAntigens` (reactive).}
   \item{plate_name}{Plate name inside of the plate layout file.}
 }
 \details{

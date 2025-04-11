@@ -2,17 +2,17 @@
 \alias{getAntigenCounts}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Get Counts per Antigen from readAntigens Output
+Get Bead Counts per Antigen
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Get Counts per Antigen from readAntigens Output
 }
 \usage{
-getAntigenCounts(antigens_output, plate_list)
+getAntigenCounts(antigen_output, plate_list)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{antigens_output}{Output from `readAntigens` (reactive).}
+  \item{antigen_output}{Output from `readAntigens` (reactive).}
   \item{plate_name}{Plate name inside of the plate layout file. }
 }
 \details{
@@ -37,7 +37,7 @@ Dionne Argyropoulos
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-getAntigenCounts(antigens_output, plate_list)
+getAntigenCounts(antigen_output, plate_list)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
